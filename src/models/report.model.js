@@ -50,6 +50,11 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: true,
                 comment: '',
             },
+            user_id: {
+                type: DataTypes.INTEGER,
+                notNull: true,
+                comment: '',
+            },
         },
         {
             tableName: 'report',

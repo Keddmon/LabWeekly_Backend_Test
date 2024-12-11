@@ -83,7 +83,7 @@ export const signIn = async (req, res) => {
             role: data.role,
         };
 
-        return req.session.save(() => {
+        req.session.save(() => {
             res.status(200).json({
                 status: 200,
                 message: '로그인 성공',
