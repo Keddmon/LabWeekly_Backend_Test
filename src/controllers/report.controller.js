@@ -23,7 +23,7 @@ export const getReports = async (req, res) => {
     }
 };
 
-// 회원이 작성한 보고서 조회
+// 회원 보고서 조회
 export const getUserReports = async (req,res) => {
     try {
         const user_id = req.session.user.user_id;

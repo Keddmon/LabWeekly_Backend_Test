@@ -10,7 +10,7 @@ export class ReportService {
                 include: [
                     {
                         model: db.user,
-                        attribute: ['name'],
+                        attributes: ['name'],
                     },
                 ],
             });
@@ -32,12 +32,12 @@ export class ReportService {
                 throw new CustomError(401, '존재하지 않는 아이디');
             }
 
-            const data = await db.report.findOne({
+            const data = await db.report.findAll({
                 where: { user_id },
                 include: [
                     {
                         model: db.user,
-                        attribute: ['name'],
+                        attributes: ['name'],
                     },
                 ],
             });
